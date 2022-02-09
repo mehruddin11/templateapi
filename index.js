@@ -31,8 +31,11 @@ app.get('/download/:id', async(req, res)=>{
         data.Templates.forEach(temp=>{
             
             if(temp.id === id){
-                 return res.sendFile(path.resolve(temp.download))
+                console.log("helllooo")
                
+               return res.sendFile(path.resolve(temp.download))
+               
+              
             }
             
             
