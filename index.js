@@ -31,9 +31,7 @@ app.get('/download/:id', async(req, res)=>{
         data.Templates.forEach(temp=>{
             
             if(temp.id === id){
-               
-               
-               return res.sendFile(path.resolve(temp.download))
+                return res.sendFile(path.resolve(temp.download))
                
               
             }
@@ -44,6 +42,21 @@ app.get('/download/:id', async(req, res)=>{
     catch(err){
        res.send("hellloooo")
     }
+
+});
+app.use('/search',  (req, res)=>{
+	const filters = req.query;
+    const filterTemplate = data.Templates.filter((template)=>{
+         
+		let isvalid= true;
+		for( key in filters){
+			// console.log(key, template[key], filters[key]);
+			isvalid =isvalid && template[key] == filters[key];
+		}
+		return isvalid;
+	});
+	res.send(filterTemplate);
+	
 
 });
 
