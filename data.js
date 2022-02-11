@@ -91,7 +91,8 @@ const data = {
         html_url:'https://github.com/mehruddin11/stripe-clone',
         download:'./Database/stripeclone.zip',
         text:'Stripe Clone',
-        img:'https://user-images.githubusercontent.com/77490569/153338307-0101a8db-6f1d-47b7-8c76-787dcde040e1.png'
+        img:'https://user-images.githubusercontent.com/77490569/153338307-0101a8db-6f1d-47b7-8c76-787dcde040e1.png',
+        keyword:"stripe"
     },
     {
         id:'10',
