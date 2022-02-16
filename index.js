@@ -13,7 +13,30 @@ app.use(cors())
 // get 
 
 app.get('/', (req, res)=>{
-    res.json(data.Templates)
+    const page = parseInt(req.query.page);
+    const limit =parseInt(req.query.limit);
+   if(limit > data.Templates.length){
+        res.status(404).json(" page limit Exceded ")
+    }
+    const startIndex = (page-1) *limit;
+    const endIndex = page * limit;
+   
+    if(endIndex  <data.Templates.length){
+
+        next = {
+            page:page+1,
+            limit:limit
+        }
+    }
+    if(startIndex > 0){
+
+        previos = {
+            page:page-1,
+            limit:limit
+        }
+    }
+    res.json(data.Templates.slice(startIndex, endIndex));
+   
 })
 app.get('/template/:id', (req, res)=>{
     const {id}= req.params;
@@ -55,7 +78,10 @@ app.use('/search',  (req, res)=>{
 		}
 		return isvalid;
 	});
-	res.send(filterTemplate);
+    let  results = {}
+	results = results.results= filterTemplate;
+    res.json(results)
+    
 	
 
 });

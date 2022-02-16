@@ -1,4 +1,3 @@
-
 const data = {
     Templates:[
     {
@@ -22,7 +21,7 @@ const data = {
         text:'Auto-Slider',
         img:'https://user-images.githubusercontent.com/77490569/153167571-d6801cb1-5db9-4651-b2eb-51ed2f9a46b5.png',
         category:'react',
-        keyword:"template"
+        keyword:"slider"
     },
     {
         id:'3',
@@ -32,7 +31,7 @@ const data = {
         text:'Todo-List',
         img:'https://user-images.githubusercontent.com/77490569/153167575-ced474c0-d855-498f-91e1-a4a8fa234da7.png',
         category:'react',
-        keyword:"slider"
+        keyword:"grocery-items"
     },
     {
         id:'4',
@@ -91,8 +90,7 @@ const data = {
         html_url:'https://github.com/mehruddin11/stripe-clone',
         download:'./Database/stripeclone.zip',
         text:'Stripe Clone',
-        img:'https://user-images.githubusercontent.com/77490569/153338307-0101a8db-6f1d-47b7-8c76-787dcde040e1.png',
-        keyword:"stripe"
+        img:'https://user-images.githubusercontent.com/77490569/153338307-0101a8db-6f1d-47b7-8c76-787dcde040e1.png'
     },
     {
         id:'10',
